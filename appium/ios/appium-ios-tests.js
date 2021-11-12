@@ -16,6 +16,9 @@ const opts = {
 		newCommandTimeout: "2400",
 		bundleID: "org.reactjs.native.example.ReactNativeSemaphoreNew",
 		udid: "424812ED-A78C-47F5-88A3-AD5901E2453F"
+		// usePrebuiltWDA: "true",
+		// derivedDataPath: "~/.config/yarn/global/node_modules/appium-webdriveragent/"
+		// derivedDataPath: "/Users/runner/work/mobile-pipeline-poc/mobile-pipeline-poc"
 		//noReset: "true"
 		//webDriverAgentUrl: "127.0.0.1:8100"
 	}
