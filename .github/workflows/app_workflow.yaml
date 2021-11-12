@@ -99,6 +99,10 @@ jobs:
       - name: List sdks
         run: xcodebuild -showsdks
 
+      - name: WDA
+        run: |
+          unzip ~/.config/yarn/global/node_modules/appium-webdriveragent/WebDriverAgentRunner-Runner.app.zip -d  WebDriverAgentRunner-Runner.app
+
       # - name: Start webdriver agent
       #   run: |
       #     cd ~/.config/yarn/global/node_modules/appium-webdriveragent/
