@@ -104,10 +104,14 @@ jobs:
           sudo xcode-select --switch /Applications/Xcode_12.4.app
           xcodebuild -version
 
-      - name: WDA
+      - name: Unzip WDA
         run: |
           unzip ~/.config/yarn/global/node_modules/appium-webdriveragent/WebDriverAgentRunner-Runner.app.zip -d  WebDriverAgentRunner-Runner.app
 
+      - name: Build WDA
+        run: |
+          xcodebuild clean archive -project ~/.config/yarn/global/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'generic/platform=iOS Simulator,name=iPhone 11,OS=14.4' -archivePath $PWD/WebDriverAgent.xcarchive CODE_SIGNING_ALLOWED=NO IPHONEOS_DEPLOYMENT_TARGET=14.4 &
+      # cd ~/.config/yarn/global/node_modules/appium-webdriveragent/
       # - name: Start webdriver agent
       #   run: |
       #     cd ~/.config/yarn/global/node_modules/appium-webdriveragent/
