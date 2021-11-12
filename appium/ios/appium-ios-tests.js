@@ -16,7 +16,9 @@ const opts = {
         showXcodeLog: "true",
 		newCommandTimeout: "2400",
 		bundleID: "org.reactjs.native.example.ReactNativeSemaphoreNew",
-		udid: "424812ED-A78C-47F5-88A3-AD5901E2453F"
+		//udid: "2A741C1C-D644-414F-BD59-EA56A9814FEA",
+		//udid: "424812ED-A78C-47F5-88A3-AD5901E2453F",
+		isHeadless: "true"
 		// usePrebuiltWDA: "true",
 		// derivedDataPath: "~/.config/yarn/global/node_modules/appium-webdriveragent/WebDriverAgentRunner-Runner.app.zip"
 		// derivedDataPath: "/Users/runner/work/mobile-pipeline-poc/mobile-pipeline-poc/WebDriverAgentRunner-Runner.app"
