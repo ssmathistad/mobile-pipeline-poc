@@ -19,58 +19,23 @@ const opts = {
 		//udid: "2A741C1C-D644-414F-BD59-EA56A9814FEA",
 		//udid: "424812ED-A78C-47F5-88A3-AD5901E2453F",
 		isHeadless: "true"
-		// usePrebuiltWDA: "true",
-		// derivedDataPath: "~/.config/yarn/global/node_modules/appium-webdriveragent/WebDriverAgentRunner-Runner.app.zip"
-		// derivedDataPath: "/Users/runner/work/mobile-pipeline-poc/mobile-pipeline-poc/WebDriverAgentRunner-Runner.app"
-		//noReset: "true"
-		//webDriverAgentUrl: "127.0.0.1:8100"
 	}
 };
 
-function sleep (time) {
-	return new Promise((resolve) => setTimeout(resolve, time * 1000));
-}
-
 describe('Mobile App POC Appium Tests', function () {
 	let client;
-	/*
-	webDriverReady = false;
-	  while (!webDriverReady) {
-		try {
-	*/
-			beforeEach(async function () {
-				this.timeout(500000);
-				client = await wdio.remote(opts);
-				client.setImplicitTimeout(500000);
-			});
-		
-			afterEach(async function () {
-				this.timeout(500000);
-				const delete_session = await client.deleteSession();
-				assert.isNull(delete_session);
-			});
-	/*
-			webDriverReady = true;
 
-		} catch (error) {
-			sleep(60);
-		}		
-	}
-	*/
-
-	/*
 	beforeEach(async function () {
 		this.timeout(500000);
 		client = await wdio.remote(opts);
 		client.setImplicitTimeout(500000);
-	}); 
+	});
 
 	afterEach(async function () {
 		this.timeout(500000);
 		const delete_session = await client.deleteSession();
 		assert.isNull(delete_session);
 	});
-	*/
 
 	it('should create and delete a session', async function () {
 		console.log("START");
